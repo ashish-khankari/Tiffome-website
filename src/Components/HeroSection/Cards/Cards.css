@@ -1,0 +1,41 @@
+.img-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+}
+
+.img-cards .img{
+    height: 230px;
+    width: 400px;
+    padding: 10px;
+}
+
+.img-cards .text{
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.img-cards .link{
+    padding-top: 12px;
+}
+
+.img-cards .link a{
+    margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width:650px){
+    .img-cards{
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
+    }
+}
