@@ -1,9 +1,7 @@
 .main {
-    /* height: auto; */
-    max-width: 100%;
+    width: 100%;
     margin-top: -70px;
-    /* background-color: rgb(175, 207, 235); */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE1mqX4buHr1j_CEt0N2y_ZHEBWl3eXrA8NTQyg7N5vw&usqp=CAU&ec=48665701');
+    background-image: url('C:/Users/Ashish/Desktop/Tiffome React/tiffome/public/Assets/background-tiffin.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -15,9 +13,8 @@
     font-size: 6vw;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
-    /* align-items: flex-start; */
     margin-left: 55px;
   }
   
@@ -65,14 +62,14 @@
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     height: 50px;
-    width: 100%;
+    width: 80%;
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(252, 252, 252);
   }
   
   #small-text a {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   
   #small-text a:hover {
@@ -102,6 +99,10 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+      }
+
+      #small-text{
+        width: 80%;
       }
     }
     

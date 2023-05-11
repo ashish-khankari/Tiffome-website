@@ -1,0 +1,54 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: azure;
+    height: 450px;
+
+}
+
+.grid-1{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-1 .nav-list{
+    display: flex;
+    gap: 8px;
+}
+
+.grid-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.grid-3 .footer-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.social-media-icons{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.social-media-icons:hover{
+height: 35px;
+transition: 0.3s all ease;
+}
+
+@media only screen and (max-width:868px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: azure;
+        height: 650px;
+        margin-top: 100px;
+    }
+}

@@ -1,12 +1,25 @@
 .img-cards {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    width: 100%;
+    margin: auto;
+    padding: 2rem;
+    margin-left: 45px;
 }
 
-.img-cards .img{
+.cards{
+    min-height: 220px;
+    min-width: 220px;
+    margin-right: 2rem;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-top: 5px;
+}
+
+.cards::-webkit-scrollbar{
+    display: none;
+}
+ .img{
     height: 230px;
     width: 400px;
     padding: 10px;
@@ -32,10 +45,8 @@
 
 
 @media only screen and (max-width:650px){
-    .img-cards{
-        
+    .cards{
         display: flex;
         flex-direction: column;
-        margin-top: 300px;
     }
 }
