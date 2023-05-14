@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from './HotelRegistrationForm.module.css'
 const HotelRegistartion = () => {
 
     // maintaining state for each input field
@@ -11,6 +12,11 @@ const HotelRegistartion = () => {
     const [fullName, setFullName] = useState('')
 
     // const [mydata, setData] = useState("")
+
+    function submitHotelData(e){
+        e.preventDefault()
+        submitData()
+    }
 
     function submitData() {
 
@@ -34,7 +40,7 @@ const HotelRegistartion = () => {
             setMobile("")
             setCity("")
             setRate("")
-            setFullName()
+            setFullName("")
 
             alert("ThankYou for Registering")
         } else {
@@ -46,69 +52,70 @@ const HotelRegistartion = () => {
 
     return (
 
-        <div className='registration-form'>
+        <div className={styles.registrationForm}>
             <h1>Register Your Restaurant</h1>
-            <form>
+            <form className={styles.hotelRegistrationForm} onSubmit={submitHotelData}>
+                <div className={styles.registrationForm}>
 
-                <input
-                    placeholder='Add Your Name'
-                    type='text'
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                    className='input-field'
-                />
-                <input
-                    placeholder='Add Your Email'
-                    type='email'
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    className='input-field'
+                    <input
+                        placeholder='Add Your Name'
+                        type='text'
+                        onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        className={styles.inputField}
+                    />
+                    <input
+                        placeholder='Add Your Email'
+                        type='email'
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                        className={styles.inputField}
 
-                />
-                <input
-                    placeholder='Add Your Mobile'
-                    type='number'
-                    onChange={(e) => setMobile(e.target.value)}
-                    value={mobile}
-                    className='input-field'
+                    />
+                    <input
+                        placeholder='Add Your Mobile'
+                        type='number'
+                        onChange={(e) => setMobile(e.target.value)}
+                        value={mobile}
+                        className={styles.inputField}
 
-                />
-                <input
-                    placeholder='Add Your Address'
-                    type='text'
-                    onChange={(e) => setAddress(e.target.value)}
-                    value={address}
-                    className='input-field'
+                    />
+                    <input
+                        placeholder='Add Your Address'
+                        type='text'
+                        onChange={(e) => setAddress(e.target.value)}
+                        value={address}
+                        className={styles.inputField}
 
-                />
-                <input
-                    placeholder='Add Your City'
-                    type='text'
-                    onChange={(e) => setCity(e.target.value)}
-                    value={city}
-                    className='input-field'
-                />
+                    />
+                    <input
+                        placeholder='Add Your City'
+                        type='text'
+                        onChange={(e) => setCity(e.target.value)}
+                        value={city}
+                        className={styles.inputField}
+                    />
 
-                <input
-                    placeholder='Add Your Tiffin Rate'
-                    type='text'
-                    onChange={(e) => setRate(e.target.value)}
-                    value={rate}
-                    className='input-field'
-                />
+                    <input
+                        placeholder='Add Your Tiffin Rate'
+                        type='text'
+                        onChange={(e) => setRate(e.target.value)}
+                        value={rate}
+                        className={styles.inputField}
+                    />
 
-                <input
-                    placeholder='Enter Full Name'
-                    type='text'
-                    onChange={(e) => setFullName(e.target.value)}
-                    value={fullName}
-                    className='input-field'
-                />
+                    <input
+                        placeholder='Enter Full Name'
+                        type='text'
+                        onChange={(e) => setFullName(e.target.value)}
+                        value={fullName}
+                        className={styles.inputField}
+                    />
 
-
+                    <button className={styles.submitBtn}>Submit</button>
+                </div>
             </form>
 
-            <button onClick={submitData} className='submit-btn'>Submit</button>
         </div>
 
     )

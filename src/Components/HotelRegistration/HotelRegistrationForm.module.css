@@ -1,0 +1,39 @@
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .hotelRegistrationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ccc;
+    border-radius: 15px;
+  }
+   
+
+  .inputField {
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    font-size: 19px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 25px;
+    margin: 15px;
+  }
+
+  .submitBtn {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px;
+  }
