@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Footer.css"
+import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 export default function Footer() {
   return (
@@ -9,11 +10,10 @@ export default function Footer() {
           Tiffome
         </h1>
         <div className='nav-list'>
-          <p>Home</p>
-          <p>About Us</p>
-          <p>Contact</p>
-          <p>Services</p>
-          <p>Support</p>
+          <p><Link to={'/'} >Home</Link></p>
+          <p><Link to={'/contact'} >Contact</Link></p>
+          <p><Link to={'/about'} >About</Link></p>
+
         </div>
 
         <h2 className='start-date'>Tiffome @2018</h2>
@@ -29,10 +29,20 @@ export default function Footer() {
         <h4>About the Company</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
         <div className='footer-icons'>
-          <FaFacebookSquare className='social-media-icons' />
-          <FaTwitterSquare className='social-media-icons' />
-          <FaLinkedin className='social-media-icons' />
-          <FaGithubSquare className='social-media-icons' />
+          <a href="https://github.com/ashish-khankari" target="_blank" rel="noopener noreferrer">
+            <FaGithubSquare className='social-media-icons' />
+          </a>
+          <a href="https://github.com/ashish-khankari" target="_blank" rel="noopener noreferrer">
+            <FaFacebookSquare className='social-media-icons' />
+          </a>
+          <a href="https://github.com/ashish-khankari" target="_blank" rel="noopener noreferrer">
+            <FaTwitterSquare className='social-media-icons' />
+          </a>
+          <a href="https://www.linkedin.com/in/ashish-khankari/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className='social-media-icons' />
+          </a>
+
+
         </div>
       </div>
     </div>
