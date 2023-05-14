@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from './HotelRegistrationForm.module.css'
+import Navbar from '../Home/Navbar/Navbar'
+import Footer from '../Home/Footer/Footer'
 const HotelRegistartion = () => {
 
     // maintaining state for each input field
@@ -51,7 +53,8 @@ const HotelRegistartion = () => {
     }
 
     return (
-
+        <>
+        <Navbar/>
         <div className={styles.registrationForm}>
             <h1>Register Your Restaurant</h1>
             <form className={styles.hotelRegistrationForm} onSubmit={submitHotelData}>
@@ -115,9 +118,10 @@ const HotelRegistartion = () => {
                     <button className={styles.submitBtn}>Submit</button>
                 </div>
             </form>
-
+            
         </div>
-
+        <Footer/>
+        </>
     )
 }
 
