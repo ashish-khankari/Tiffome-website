@@ -1,1 +1,0 @@
-export const CityData = ["Delhi", "Nashik","Pune","Mumbai","Chennai","Hyderabad","Patna","Indore","Jammu","Kashmir","Dehradun","Ichalkaranji","Thane", "Ambarnath", "Delhi NCR", "Kashi", "Varanasi", "Kothrud"]
