@@ -25,3 +25,9 @@
     border-radius: 15px;
     cursor: pointer;
 }
+
+.register a {
+    color: white;
+    text-decoration: none;
+  }
+  

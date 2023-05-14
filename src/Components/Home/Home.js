@@ -4,8 +4,8 @@ import MobileVersion from "./MobileVersion/MobileVersion"
 import HeroSection from "./Main/HeroSection"
 import { Cities } from "./Cities/Cities"
 import Navbar from "./Navbar/Navbar"
-import RegisterHotel from "./RegisterHotel/RegisterHotel"
 import { NewsLetter } from "./NewsLetter/NewsLetter"
+import RegisterHotel from "./RegisterHotel/RegisterHotel"
 export default function Home() {
     return (
         <div>
@@ -13,11 +13,10 @@ export default function Home() {
             <HeroSection />
             <Cards />
             <Cities />
-            <RegisterHotel />
+           <RegisterHotel/>
             <MobileVersion />
             <NewsLetter/>
             <Footer />
-
         </div>
     )
 }

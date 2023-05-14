@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './HotelRegistartion.css'
 const HotelRegistartion = () => {
 
     // maintaining state for each input field
