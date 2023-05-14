@@ -1,0 +1,36 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    margin-top: 150px;
+    height: 400px;
+    background-image: url('https://media.istockphoto.com/id/481507989/photo/indian-concierge-welcome-guest-at-hotel-entrance-india.jpg?b=1&s=170667a&w=0&k=20&c=imCgGyus1cdIaoQkj8zi2rBX3iHNSgeq38_2tm_HjHc=');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.enter-email{
+    width: 300px;
+    height: 28px;
+    font-size: 18px;
+}
+
+.subscribe-text{
+    color: white;
+}
+
+.update-text{
+    color: white;
+}
+.sign-up{
+    margin-top: 20px;
+    width: 125px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgba(106, 214, 247, 0.541);
+    border: none;
+
+}

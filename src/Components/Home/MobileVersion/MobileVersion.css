@@ -1,0 +1,52 @@
+.mobile-version{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 550px;
+}
+
+h1{
+    font-size: 35px;
+}
+
+.image{
+    height: 400px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.app-store{
+    width: 200px;
+    cursor: pointer;
+}
+
+.google-store{
+    width: 200px;
+    margin-top: 15px;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-version {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 55px;
+      height: 650px;
+    }
+
+    .app-store{
+        cursor: pointer;
+    }
+    
+    .google-store{
+        cursor: pointer;
+    }
+
+    
+}
