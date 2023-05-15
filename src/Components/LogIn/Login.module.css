@@ -1,0 +1,47 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    /* height: 400px; */
+    min-height: 450px;
+    background-color: #adadad;
+    margin: 8rem auto;
+    margin-top: 80px;
+    padding-top: 25px;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+
+}
+
+.toLogin{
+    color: blue;
+    
+}
+
+.form h1{
+    margin: 1.5rem auto;
+}
+
+input{
+    padding: 0.4rem;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid #eee;
+    font-size: 18px;
+
+}
+
+.btn{
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.377);
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+p span{
+    font-size: 20px;
+}
