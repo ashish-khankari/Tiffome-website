@@ -9,14 +9,14 @@ import RegisterHotel from "./RegisterHotel/RegisterHotel"
 export default function Home() {
     return (
         <div>
-            <Navbar />
+            
             <HeroSection />
             <Cards />
             <Cities />
-           <RegisterHotel/>
+            <RegisterHotel />
             <MobileVersion />
-            <NewsLetter/>
-            <Footer />
+            <NewsLetter />
+           
         </div>
     )
 }

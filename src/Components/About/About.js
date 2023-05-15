@@ -5,7 +5,7 @@ import Footer from '../Home/Footer/Footer'
 export default function About() {
   return (
     <div>
-      <Navbar/>
+    
       <div className={styles.aboutSection}>
         <h1>Welcome to Tiffome</h1>
         <div className={styles.text}>
@@ -24,7 +24,6 @@ export default function About() {
 
       </div>
       <div className={styles.footer}>
-      <Footer/>
       </div>
     </div>
   )

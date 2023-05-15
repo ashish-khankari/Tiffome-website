@@ -1,32 +1,11 @@
 import React, { useState } from 'react'
 import styles from './SignIn.module.css'
 import { Link } from 'react-router-dom'
-import Navbar from '../Home/Navbar/Navbar'
-import Footer from '../Home/Footer/Footer'
 export default function SignIn() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-
-
-  function myName(e) {
-    setName(e.target.value)
-    // setName("")
-
-  }
-  function myEmail(e) {
-    setEmail(e.target.value)
-
-  }
-  function myPassword(e) {
-    setPassword(e.target.value)
-
-  }
-  function MyConfirmPassword(e) {
-    setConfirmPassword(e.target.value)
-
-  }
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -74,27 +53,26 @@ export default function SignIn() {
   return (
 
     <>
-    <Navbar/>
       <form onSubmit={submitData} className={styles.form}>
-        <h1>Sign-In Here</h1>
+        <h1>Sign-Up</h1>
         <input
           type="text"
           placeholder="Enter Your Name"
-          onChange={myName}
+          onChange={(e)=>setName(e.target.value)}
           value={name}
           className={styles.name}
         />
         <input
           type="email"
           placeholder="Enter Your Email"
-          onChange={myEmail}
+          onChange={(e)=>setEmail(e.target.value)}
           value={email}
           className={styles.name}
         />
         <input
           type="password"
           placeholder="Enter Your Password"
-          onChange={myPassword}
+          onChange={(e)=>setPassword(e.target.value)}
           value={password}
           className={styles.name}
 
@@ -102,7 +80,7 @@ export default function SignIn() {
         <input
           type="password"
           placeholder="Confirm Your Password"
-          onChange={MyConfirmPassword}
+          onChange={(e)=>setConfirmPassword(e.target.value)}
           value={confirmPassword}
           className={styles.name}
 
@@ -110,7 +88,7 @@ export default function SignIn() {
         <p>If you are already a member, click to <span><Link to={'/logIn'} >LogIn</Link></span> </p>
         <button onClick={handleSubmit} className={styles.btn}>Submit</button>
       </form>
-      <Footer/>
+      
     </>
   )
 }

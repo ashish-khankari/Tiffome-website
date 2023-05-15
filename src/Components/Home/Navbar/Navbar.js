@@ -26,7 +26,7 @@ export default function Navbar() {
                     <li>
                       <button className="log-in">
                          <FaUser className="user-icon" />
-                      <Link to={'/login'}>LogIn</Link>
+                      <Link to={'/logIn'}>LogIn</Link>
                       </button>
                    </li>
                    <li>

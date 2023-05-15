@@ -38,7 +38,7 @@ export default function Contact() {
   return (
     
     <>
-    <Navbar/>
+   
     <div className={styles.contain}>
       
       <div className={styles.wrapper}>
@@ -92,8 +92,6 @@ export default function Contact() {
     </div>
 
     <div className={styles.footer}>
-    <Footer/>
-
     </div>
     </>
   )

@@ -10,13 +10,15 @@ import HotelRegistartion from './Components/HotelRegistration/HotelRegistartion'
 function App() {
   return (
 
+   
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/about' element={<About />} />
-      <Route path='/login' element={<Login />} />
+      <Route path='/logIn' element={<Login />} />
       <Route path='/signIn' element={<SignIn />} />
       <Route path='/registerHotelForm' element={<HotelRegistartion/>} />
+     
     </Routes>
 
   );
