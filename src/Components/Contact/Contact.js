@@ -10,12 +10,13 @@ export default function Contact() {
   const [contactMessage, setContactMessage] = useState("")
 
 
+  
   function submitContactDetails(e) {
     e.preventDefault()
 
     let nameRegex = /^[a-zA-Z- ]+$/g;
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/g;
-    // let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/g;
+
     if (!nameRegex.test(contactName)) {
       alert("Enter Correct Name, Numerical Values are not allowded")
     } else if (!emailRegex.test(contactEmail)) {

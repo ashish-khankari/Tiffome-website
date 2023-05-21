@@ -30,6 +30,12 @@
     
 }
 
+.nav-list p a{
+    list-style: none;
+    color: black;
+    font-size: 18px;
+}
+
 .footer-icons a{
     color: black;
 }
