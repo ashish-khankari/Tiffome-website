@@ -2,6 +2,7 @@ import React from 'react'
 import './ShowButtons.css'
 import { FaUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+
 export default function ShowButtons() {
     return (
         <div>

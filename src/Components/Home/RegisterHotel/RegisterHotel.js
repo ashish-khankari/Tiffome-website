@@ -17,9 +17,10 @@ export default function RegisterHotel() {
   }
   return (
     <div className={styles.hotelRegistration}>
-        <h1 className={styles.text}>Register Your Services</h1>
+      <h2 className={styles.text1}>Grow your restaurant business</h2>
+        <h1 className={styles.text}>Add your restaurant now! It's FREE!</h1>
 
-        <button className={styles.register} onClick={handleRegisterForm}>Registration Form</button>
+        <button className={styles.register} onClick={handleRegisterForm}>Get Started</button>
     </div>
   )
 }
