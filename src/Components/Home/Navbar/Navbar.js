@@ -1,11 +1,24 @@
 import React, {useState} from 'react'
 import './Navbar.css'
-import { FaBars, FaUser } from "react-icons/fa";
+import { FaBars} from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import ShowButtons from './ShowButtons';
+import { useNavigate } from 'react-router-dom';
+
 export default function Navbar() {
     const [showMenu, setShowMenu] = useState(false);
+
+    const navigate = useNavigate()
+
+    const authorizedUser = localStorage.getItem('loggedIn')
+    console.log(authorizedUser)
     function showHamburgerMenu(){
             setShowMenu(!showMenu)
+    }
+
+    function handleLogOut(){
+      localStorage.removeItem('loggedIn')
+      navigate('/logIn')
     }
     return (
         
@@ -19,22 +32,8 @@ export default function Navbar() {
                     <li><Link to={'/'} >Home</Link></li>
                     <li><Link to={'/contact'} >Contact</Link></li>
                     <li> <Link to={'/about'} >About</Link> </li>
-                    {/* <li><Link to={'/services'} >Services</Link></li>
-                    <li><Link to={'/services'} >Support</Link></li> */}
-                    
-                  <ul className="buttons">
-                    <li>
-                      <button className="log-in">
-                         <FaUser className="user-icon" />
-                      <Link to={'/logIn'}>LogIn</Link>
-                      </button>
-                   </li>
-                   <li>
-                      <button className="sign-in">
-                      <Link to={'/signIn'}>SignIn</Link>
-                     </button>
-                   </li>
-                  </ul>
+                    { authorizedUser ? <button onClick={handleLogOut} className='logout'>LogOut</button> : <ShowButtons/> }
+                 
                 </ul>
             </div>
 
