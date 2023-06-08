@@ -1,11 +1,12 @@
 .main {
     width: 100%;
     margin-top: -70px;
-    background-image: url('C:/Users/Ashish/Desktop/Tiffome/Tiffome/public/Assets/Tiffin.png'); 
+    background-image: url('../Assets/Tiffin.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     height: 550px;
+    /* background-image: url('../') */
     
   }
   
