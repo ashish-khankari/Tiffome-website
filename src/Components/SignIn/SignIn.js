@@ -20,7 +20,6 @@ export default function SignIn() {
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/g;
     let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/g;
 
-
     if (!nameRegex.test(name)) {
       alert("Enter Valid Name")
     } else
@@ -42,7 +41,6 @@ export default function SignIn() {
           setEmail("")
           setPassword("")
           setConfirmPassword("")
-
 
           setList((prevList)=>[...prevList, data])
           localStorage.setItem("user", JSON.stringify([...list, data]))

@@ -7,6 +7,7 @@ import Login from './Components/LogIn/Login';
 import SignIn from './Components/SignIn/SignIn';
 import HotelRegistartion from './Components/HotelRegistration/HotelRegistartion';
 import ProtectedRoutes from './ProtectedRoutes';
+import { Services } from './Components/Services/Services';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Route path='/about' element={<About />} />
       <Route path='/logIn' element={<Login />} />
       <Route path='/signIn' element={<SignIn />} />
+      <Route path='/services' element={<Services />} />
+
 
     </Routes>
 

@@ -1,78 +1,47 @@
 import React, { useState } from 'react'
 import styles from './Login.module.css'
-import { Link } from 'react-router-dom'
-// import Alert from '@mui/material/Alert';
-// import AlertTitle from '@mui/material/AlertTitle';
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function LogIn() {
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  // const [error, alert] = useState("")
-  // const [success, setSuccess] = useState("")
+  const [myName, setName] = useState("")
+  const [myEmail, setEmail] = useState("")
+  const [myPassword, setPassword] = useState("")
+  const navigate = useNavigate()
+
   function submitLogInData(e) {
     e.preventDefault()
 
-    let nameRegex = /^[a-zA-Z- ]+$/g;
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/g;
-    let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/g;
+    const loggedUser = JSON.parse(localStorage.getItem("user"))
 
-    let nameCheck = nameRegex.test(name)
-    let emailCheck = emailRegex.test(email)
-    let passwordCheck = passwordRegex.test(password)
-    if (!nameCheck) {
-      alert("Enter Valid Name")
-    } else if (!emailCheck) {
-      alert("Enter Valid Email")
-    } else if (!passwordCheck) {
-      alert("Enter Valid Password")
-    }
-    if (nameCheck && emailCheck && passwordCheck) {
-      let data = {
-        name: name,
-        email: email,
-        password: password
-      }
-      alert("You are succesfully logged in")
-      setEmail("")
-      setName("")
-      setPassword("")
-      
-      console.log(data)
-
-    }
+    const user = loggedUser.find((item)=> item.email == myEmail && item.password == myPassword && item.name == myName)
+    
+        if(user){
+            localStorage.setItem("loggedIn", true)
+            navigate('/')
+        }else{
+            alert("Enter correct password")
+        }
   }
 
   return (
     <div>
 
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={submitLogInData}>
         <h1>Log-In</h1>
-        {/* {error && (
-          <Alert severity="error">
-            <AlertTitle>{error}</AlertTitle>
-          </Alert>
-        )}
-
-        {success && (
-          <Alert severity="success">
-            <AlertTitle>{success}</AlertTitle>
-          </Alert>
-        )} */}
         <input
           type="text"
           placeholder="Enter Your Name"
           className={styles.name}
           onChange={(e) => setName(e.target.value)}
-          value={name}
+          value={myName}
         />
         <input
           type="email"
           placeholder="Enter Your Email"
           className={styles.name}
           onChange={(e) => setEmail(e.target.value)}
-          value={email}
+          value={myEmail}
 
         />
 
@@ -81,10 +50,10 @@ export default function LogIn() {
           placeholder="Enter Your Password"
           className={styles.name}
           onChange={(e) => setPassword(e.target.value)}
-          value={password}
+          value={myPassword}
         />
         <p>If you are new to Tiffome, click to <span><Link to={'/signIn'}>SignIn</Link></span> </p>
-        <button className={styles.btn} onClick={submitLogInData}>Submit</button>
+        <button className={styles.btn}>Submit</button>
       </form>
     </div>
   )

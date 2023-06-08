@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from './HotelRegistrationForm.module.css'
-
+import { firestore } from '../../config/firebase'
 
 const HotelRegistartion = () => {
 
@@ -18,6 +18,10 @@ const HotelRegistartion = () => {
     function submitHotelData(e){
         e.preventDefault()
         submitData()
+        firestore.collection("user_data")
+        .add({
+            name, email, mobile, address, city, rate, fullName
+        })
     }
 
     function submitData() {

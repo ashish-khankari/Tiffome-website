@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from './about.module.css'
-import Navbar from '../Home/Navbar/Navbar'
-import Footer from '../Home/Footer/Footer'
 export default function About() {
   return (
     <div>
